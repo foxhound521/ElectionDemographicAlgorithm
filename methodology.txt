@@ -1,0 +1,6 @@
+
+Feature 13 Methodology:
+Variable Selection: Select the variables from county facts using recursive feature elimination (RFE). RFE helps choose the best predictors and avoids using redundant predictors, like income and household income. 
+Exploratory Analysis: Simple exploratory analysis to get a sense of the data. Here we find some of the key indicators of counties Trump won and counties Clinton won. The reason for this is to compare these simple analyses with the more robust analyses to follow. If the findings were markedly different, it is a helpful flag for potential flaws with the complex models. 
+Model selection: The predictor variables chosen by RFE are plugged into two competing models, a logistic regression and a random forest regression. The root mean square error (RMSE), the difference between values predicted by the model, and the values actually observed. Both models are computed and the model with the lower RMSE is selected. 
+Run Model: Run the selected model, which will end up being the random forest regressor. This model will then use the predictor variables chosen from RFE to predict which candidate will win a county. 
